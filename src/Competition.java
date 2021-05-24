@@ -21,14 +21,14 @@ public class Competition {
     }
   }
 
-  public void assignSwimTeams(ArrayList<Member> competitors, Competitor competitor, ArrayList<Competitor> crawl, ArrayList<Competitor> backCrawl, ArrayList<Competitor> breast, ArrayList<Competitor> butterfly) {
+  public void assignSwimTeams(ArrayList<Member> competitors, Competitor competitor, ArrayList<Competitor> crawlSwimmers, ArrayList<Competitor> backCrawlSwimmers, ArrayList<Competitor> breastSwimmers, ArrayList<Competitor> butterflySwimmers) {
     for (int i = 0; i < competitors.size(); i++) {
       competitor.setName(competitors.get(i).getName());
       competitor.setID(competitors.get(i).getID());
       competitor.setDiscipline(competitor.randomizeDiscipline());
       competitor.setLocalDateTime();
       competitor.setTimer(competitor.getRandomTime());
-      addToDiscipline(competitor, crawl, backCrawl, breast, butterfly);
+      addToDiscipline(competitor,crawlSwimmers, backCrawlSwimmers, breastSwimmers, butterflySwimmers);
 
 
     }
