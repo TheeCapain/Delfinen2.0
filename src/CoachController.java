@@ -32,10 +32,6 @@ public class CoachController {
       choice = ui.scanString();
       switch (choice) {
         case "1" -> top5Controller(ui, menu);
-        case "2" -> {
-          competition.printSeniors(seniorCompetitors, ui);
-          competition.printJuniors(juniorCompetitors, ui);
-        }
         case "9" -> isRunning = false;
       }
     } while (isRunning);
@@ -60,14 +56,15 @@ public class CoachController {
       switch (choice) {
         case "1" -> competition.printBreast(ui, breastSwimmersJunior);
         case "2" -> competition.printCrawl(ui, crawlSwimmersJunior);
-        case "3" -> competition.printBackCrawl(ui, backCrawlSwimmersJunior);
+        case "3" -> competition.printBackCrawlTop5(ui, backCrawlSwimmersJunior);
         case "4" -> competition.printButterfly(ui, butterflySwimmersJunior);
         case "5" -> competition.printBreast(ui, breastSwimmersSenior);
         case "6" -> competition.printCrawl(ui, crawlSwimmersSenior);
-        case "7" -> competition.printBackCrawl(ui, backCrawlSwimmersSenior);
+        case "7" -> competition.printBackCrawlTop5(ui, backCrawlSwimmersSenior);
         case "8" -> competition.printButterfly(ui, butterflySwimmersSenior);
         case "9" -> isRunning = false;
       }
     } while (isRunning);
   }
 }
+
