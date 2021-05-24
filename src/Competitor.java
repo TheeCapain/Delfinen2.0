@@ -7,7 +7,7 @@ public class Competitor implements Comparable<Competitor>{
   private int ID;
   private LocalDateTime localDateTime;
   private LocalTime timer;
-  private final String[] swimTypes = {"Crawl", "BackCrawl", "Breast", "Butterfly"};
+  private final String[] SWIM_TYPES = {"Crawl", "BackCrawl", "Breast", "Butterfly"};
   private String discipline;
   Random rand = new Random();
 
@@ -21,6 +21,10 @@ public class Competitor implements Comparable<Competitor>{
 
   public Competitor() {
 
+  }
+  public String randomizeDiscipline() {
+    int surprise = rand.nextInt(4);
+    return discipline = SWIM_TYPES[surprise];
   }
 
   public String getName() {
@@ -63,12 +67,6 @@ public class Competitor implements Comparable<Competitor>{
 
   public void setDiscipline(String discipline) {
     this.discipline = discipline;
-  }
-
-  public String randomizeDiscipline() {
-    int surprise = rand.nextInt(4);
-    return discipline = swimTypes[surprise];
-
   }
 
   public String getDiscipline() {

@@ -73,7 +73,7 @@ public class ManageMembers {
       ui.display("Name changed...");
     }
   }
-
+// jens
   public void editMemberStatus(Member member, Ui ui) {
     boolean keepRunning = true;
     do {
@@ -91,7 +91,7 @@ public class ManageMembers {
       }
     } while (keepRunning);
   }
-
+//jens
   public void editMemberAge(Member member, Ui ui) {
     ui.display("Enter new Age:");
     ui.display("Enter 0 to cancel");

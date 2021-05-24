@@ -12,8 +12,8 @@ public class Member  {
   private String memberStatus;
   private int memberCash;
   //Members over the age of 60 are given a 25% discount on the senior = 1600kr.one year. discunt will be = 400kr.
-  private final int Discunt_OVER_60 = 1600 * 25 / 100;
-  private final int[] YEARLY_PAYMENT = {1000, 1600, 1600 - Discunt_OVER_60, 500};
+  private final int DISCOUNT_OVER_60 = 1600 * 25 / 100;
+  private final int[] YEARLY_PAYMENT = {1000, 1600, 1600 - DISCOUNT_OVER_60, 500};
   private int yearlyPayment;
   Random rand = new Random();
 
