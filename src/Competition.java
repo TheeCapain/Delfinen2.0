@@ -11,20 +11,20 @@ public class Competition {
 
 
   //A lot of sorting
-  public void sortTeamsByAge(ArrayList<Member> activeMember, ArrayList<Member> juniorCompetitor, ArrayList<Member> seniorCompetitor) {
-    for (int i = 0; i < activeMember.size(); i++) {
-      if (activeMember.get(i).getAge() < 18) {
-        juniorCompetitor.add(activeMember.get(i));
-      } else if (activeMember.get(i).getAge() > 18) {
-        seniorCompetitor.add(activeMember.get(i));
+  public void sortTeamsByAge(ArrayList<Member> activeMembers, ArrayList<Member> juniorCompetitors, ArrayList<Member> seniorCompetitors) {
+    for (int i = 0; i < activeMembers.size(); i++) {
+      if (activeMembers.get(i).getAge() < 18) {
+        juniorCompetitors.add(activeMembers.get(i));
+      } else if (activeMembers.get(i).getAge() > 18) {
+        seniorCompetitors.add(activeMembers.get(i));
       }
     }
   }
 
-  public void assignSwimTeams(ArrayList<Member> Competitors, Competitor competitor, ArrayList<Competitor> crawl, ArrayList<Competitor> backCrawl, ArrayList<Competitor> breast, ArrayList<Competitor> butterfly) {
-    for (int i = 0; i < Competitors.size(); i++) {
-      competitor.setName(Competitors.get(i).getName());
-      competitor.setID(Competitors.get(i).getID());
+  public void assignSwimTeams(ArrayList<Member> competitors, Competitor competitor, ArrayList<Competitor> crawl, ArrayList<Competitor> backCrawl, ArrayList<Competitor> breast, ArrayList<Competitor> butterfly) {
+    for (int i = 0; i < competitors.size(); i++) {
+      competitor.setName(competitors.get(i).getName());
+      competitor.setID(competitors.get(i).getID());
       competitor.setDiscipline(competitor.randomizeDiscipline());
       //@TODO Fix tidsformattering
       competitor.setLocalDateTime();
@@ -35,16 +35,16 @@ public class Competition {
 
     }
   }
-
-  public void addToDiscipline(Competitor competitor,ArrayList<Competitor> crawl, ArrayList<Competitor> backCrawl, ArrayList<Competitor> breast, ArrayList<Competitor> butterfly) {
+//Parsing senior and junior arrays through same method
+  public void addToDiscipline(Competitor competitor,ArrayList<Competitor> crawlSwimmers, ArrayList<Competitor> backCrawlSwimmers, ArrayList<Competitor> breastSwimmers, ArrayList<Competitor> butterflySwimmers) {
     switch (competitor.getDiscipline()) {
-      case "Crawl" -> crawl.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
+      case "Crawl" -> crawlSwimmers.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
 
-      case "BackCrawl" -> backCrawl.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
+      case "BackCrawl" -> backCrawlSwimmers.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
 
-      case "Breast" -> breast.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
+      case "Breast" -> breastSwimmers.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
 
-      case "Butterfly" -> butterfly.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
+      case "Butterfly" -> butterflySwimmers.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
 
     }
   }
