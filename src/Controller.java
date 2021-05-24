@@ -7,7 +7,6 @@ public class Controller {
   ArrayList<Member> activeMembers = new ArrayList<>();
   FileHandler fileHandler = new FileHandler();
   Member member = new Member();
-  FileHandlerScoreBoard scoreBoard = new FileHandlerScoreBoard();
   ForemanController foreman = new ForemanController();
   CashierController cashier = new CashierController();
   CoachController coach = new CoachController();

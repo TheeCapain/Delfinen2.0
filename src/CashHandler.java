@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 
 public class CashHandler {
-  private ArrayList<Member> ConfirmedPayments = new ArrayList<>();
+  private ArrayList<Member> confirmedPayments = new ArrayList<>();
   private ArrayList<Member> notConfirmedPayments = new ArrayList<>();
   private int sumTotalPayment;
   private int sumTotalConfirmPayment;
@@ -17,12 +17,12 @@ public class CashHandler {
 
   private void addPayOrNotPay(ArrayList<Member> members) {
     //null stil mit arrry
-    ConfirmedPayments.removeAll(members);
+    confirmedPayments.removeAll(members);
     notConfirmedPayments.removeAll(members);
 
     for (int i = 0; i < members.size(); i++) {
       if (members.get(i).getMemberCash() >= members.get(i).getYearlyPayment()) {
-        ConfirmedPayments.add(members.get(i));
+        confirmedPayments.add(members.get(i));
       } else if (members.get(i).getMemberCash() < members.get(i).getYearlyPayment()) {
         notConfirmedPayments.add(members.get(i));
       }
@@ -42,8 +42,8 @@ public class CashHandler {
   public void displayTotalPaymentConfirm(Ui ui, ArrayList<Member> members) {
     addPayOrNotPay(members);
     sumTotalConfirmPayment = 0;
-    for (int i = 0; i < ConfirmedPayments.size(); i++) {
-      int totalsum = ConfirmedPayments.get(i).getYearlyPayment();
+    for (int i = 0; i < confirmedPayments.size(); i++) {
+      int totalsum = confirmedPayments.get(i).getYearlyPayment();
       sumTotalConfirmPayment += totalsum;
     }
     ui.display(sumTotalConfirmPayment + " kr.");
@@ -69,14 +69,13 @@ public class CashHandler {
   public void dispalyDebtMembersInfo(Ui ui, ArrayList<Member> members) {
     addPayOrNotPay(members);
     //YearlyPayment sort
-    sort(notConfirmedPayments);
+    sortYearlyPayment(notConfirmedPayments);
     //Print out
     for (int i = 0; i < notConfirmedPayments.size(); i++) {
       ui.display(notConfirmedPayments.get(i).toString());
     }
   }
 
-  //Todo Agus skal flytte det give mining
   public void sortActiveMember(Ui ui, ArrayList<Member> members, ArrayList<Member> activeMember, FileHandler fileHandler) {
     for (int i = 0; i < members.size(); i++) {
       if (members.get(i).getMemberStatus().equals("Active")) {
@@ -86,8 +85,8 @@ public class CashHandler {
     fileHandler.saveFile(members, ui);
   }
 
-  public void sort(ArrayList<Member> notPaid) {
-    Collections.sort(notPaid, new Comparator<Member>() {
+  public void sortYearlyPayment(ArrayList<Member> notConfirmedPayments) {
+    Collections.sort(notConfirmedPayments, new Comparator<Member>() {
       @Override
       public int compare(Member m1, Member m2) {
         return Integer.valueOf(m2.getYearlyPayment()).compareTo(m1.getYearlyPayment());
@@ -95,5 +94,4 @@ public class CashHandler {
     });
   }
 }
-
 
