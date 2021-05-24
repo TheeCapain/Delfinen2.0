@@ -1,5 +1,6 @@
+// Jens
 public class Bye {
-//Jens
+
   public void bye(Ui ui) {
       ui.display("    /:''|    " + "       /:''|    ");
       ui.display("   |: 66|_   " + "      |: 66|_   ");

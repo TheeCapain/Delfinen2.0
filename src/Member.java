@@ -1,8 +1,8 @@
-
+//Jens & August
 import java.util.Random;
 
-public class Member  {
-  // Jens
+public class Member {
+  //*Jens
   private String name;
   private int age;
   private int ID;
@@ -12,12 +12,12 @@ public class Member  {
   private String memberStatus;
   private int memberCash;
   //Members over the age of 60 are given a 25% discount on the senior = 1600kr.one year. discunt will be = 400kr.
-  private final int Discunt_OVER_60 = 1600 * 25 / 100;
-  private final int[] YEARLY_PAYMENT = {1000, 1600, 1600 - Discunt_OVER_60, 500};
+  private final int DISCOUNT_OVER_60 = 1600 * 25 / 100;
+  private final int[] YEARLY_PAYMENT = {1000, 1600, 1600 - DISCOUNT_OVER_60, 500};
   private int yearlyPayment;
   Random rand = new Random();
 
-  // Jens
+  //*Jens
   public Member(String name, int age, int ID, String memberShipType, String memberStatus, int memberCash, int yearlyPayment) {
     this.name = name;
     this.age = age;
@@ -29,11 +29,10 @@ public class Member  {
 
   }
 
-  //Overlording så den kan vike i  ManageMembers
   public Member() {
   }
 
-  //August
+  //*August
   public String validateMemberShip() {
     if (getAge() < 18) {
       memberShipType = MEMBER_SHIP_TYPE[0];
@@ -44,7 +43,7 @@ public class Member  {
     }
     return memberShipType;
   }
-
+  //*August
   public String memberStatusFinal() {
     //Active","Passive
     int finalStatus = rand.nextInt(1 + 1);
@@ -55,18 +54,19 @@ public class Member  {
     }
     return memberStatus;
   }
-//August
+
+  //*August
   public int generateRandomId() {
     return rand.nextInt(9999 - 1000) + 1000;
   }
 
+  //*August
   public int generateRandomCash() {
     return rand.nextInt(2000 - 200) + 200;
   }
 
-  //Jens
+  //*Jens
   public int addMembershipPayment() {
-
     if (getAge() < 18 && getMemberStatus().equals("Active")) {
       yearlyPayment = YEARLY_PAYMENT[0];
 
@@ -81,7 +81,6 @@ public class Member  {
     }
     return yearlyPayment;
   }
-  // Jens set og get
 
   public void setName(String name) {
     this.name = name;
@@ -151,4 +150,3 @@ public class Member  {
             "\nYearlyPayment: " + yearlyPayment + " kr.";
   }
 }
-

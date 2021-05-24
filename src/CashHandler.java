@@ -1,7 +1,7 @@
+// Jens
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-
 
 public class CashHandler {
   private ArrayList<Member> confirmedPayments = new ArrayList<>();
@@ -16,7 +16,7 @@ public class CashHandler {
   //For passivt medlemskab er taksten 500 kr. årligt.
 
   private void addPayOrNotPay(ArrayList<Member> members) {
-    //null stil mit arrry
+    //nulstiller mit arrayLists
     confirmedPayments.removeAll(members);
     notConfirmedPayments.removeAll(members);
 
@@ -94,4 +94,3 @@ public class CashHandler {
     });
   }
 }
-
