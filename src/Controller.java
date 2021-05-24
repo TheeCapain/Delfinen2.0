@@ -16,7 +16,7 @@ public class Controller {
 
 
 public void runController(){
-  fileHandler.readFile(ui, members, member);
+  fileHandler.createFile(ui);
   fileHandler.readFile(ui, members, member);
 
   cashHandler.sortActiveMember(ui,members,activeMembers,fileHandler);
