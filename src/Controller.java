@@ -35,7 +35,7 @@ public void runController(){
 
       switch (choice) {
         case "1" -> foreman.initializeForeman(ui, members, menu, fileHandler);
-        case "2" -> cashier.cashierController(ui,menu,members,member);
+        case "2" -> cashier.cashierController(ui,menu,members);
         case "3" -> coach.coachInitializer(activeMembers,menu);
         case "9" -> {
           bye.bye(ui);

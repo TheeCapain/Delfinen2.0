@@ -4,7 +4,7 @@ public class CashierController {
   CashHandler cashHandler = new CashHandler();
 
 
-  public void cashierController(Ui ui, Menu menu, ArrayList<Member> members, Member member) {
+  public void cashierController(Ui ui, Menu menu, ArrayList<Member> members) {
     String choice;
     boolean keepRunning;
     // "1. Active Members","2. Passive Members"," Debt Members"};
