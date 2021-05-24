@@ -54,14 +54,14 @@ public class CoachController {
       ui.display("Enter number:");
       choice = ui.scanString();
       switch (choice) {
-        case "1" -> competition.printBreast(ui, breastSwimmerJuniors);
-        case "2" -> competition.printCrawl(ui, crawlSwimmerJuniors);
+        case "1" -> competition.printBreastTop5(ui, breastSwimmerJuniors);
+        case "2" -> competition.printCrawlTop5(ui, crawlSwimmerJuniors);
         case "3" -> competition.printBackCrawlTop5(ui, backCrawlSwimmerJuniors);
-        case "4" -> competition.printButterfly(ui, butterflySwimmerJuniors);
-        case "5" -> competition.printBreast(ui, breastSwimmerSeniors);
-        case "6" -> competition.printCrawl(ui, crawlSwimmerSeniors);
+        case "4" -> competition.printButterflyTop5(ui, butterflySwimmerJuniors);
+        case "5" -> competition.printBreastTop5(ui, breastSwimmerSeniors);
+        case "6" -> competition.printCrawlTop5(ui, crawlSwimmerSeniors);
         case "7" -> competition.printBackCrawlTop5(ui, backCrawlSwimmerSeniors);
-        case "8" -> competition.printButterfly(ui, butterflySwimmerSeniors);
+        case "8" -> competition.printButterflyTop5(ui, butterflySwimmerSeniors);
         case "9" -> isRunning = false;
       }
     } while (isRunning);
