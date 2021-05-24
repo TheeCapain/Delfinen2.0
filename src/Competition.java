@@ -1,14 +1,12 @@
+////August
 import java.util.ArrayList;
 import java.util.Collections;
 
-//August
 public class Competition {
   //Compares and finds top 5
   public void compareTimes(ArrayList<Competitor> competitors) {
     Collections.sort(competitors);
-
   }
-
 
   //A lot of sorting
   public void sortTeamsByAge(ArrayList<Member> activeMembers, ArrayList<Member> juniorCompetitors, ArrayList<Member> seniorCompetitors) {
@@ -28,9 +26,7 @@ public class Competition {
       competitor.setDiscipline(competitor.randomizeDiscipline());
       competitor.setLocalDateTime();
       competitor.setTimer(competitor.getRandomTime());
-      addToDiscipline(competitor,crawlSwimmers, backCrawlSwimmers, breastSwimmers, butterflySwimmers);
-
-
+      addToDiscipline(competitor, crawlSwimmers, backCrawlSwimmers, breastSwimmers, butterflySwimmers);
     }
   }
 
@@ -44,27 +40,21 @@ public class Competition {
       case "Breast" -> breastSwimmers.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
 
       case "Butterfly" -> butterflySwimmers.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
-
     }
   }
 
   public void printCrawlTop5(Ui ui, ArrayList<Competitor> crawlSwimmers) {
     if (crawlSwimmers.size() <= 5) {
       for (int i = 0; i < crawlSwimmers.size(); i++) {
-
         ui.printFormatLines();
         ui.display("NR: " + (i + 1) + crawlSwimmers.get(i).toString());
         ui.printFormatLines();
       }
-
     } else if (crawlSwimmers.size() > 5) {
-      {
-        for (int i = 0; i < 5; i++) {
-          ui.printFormatLines();
-          ui.display("NR: " + (i + 1) + crawlSwimmers.get(i).toString());
-          ui.printFormatLines();
-        }
-
+      for (int i = 0; i < 5; i++) {
+        ui.printFormatLines();
+        ui.display("NR: " + (i + 1) + crawlSwimmers.get(i).toString());
+        ui.printFormatLines();
       }
     }
   }
@@ -72,45 +62,32 @@ public class Competition {
   public void printBackCrawlTop5(Ui ui, ArrayList<Competitor> backCrawlSwimmers) {
     if (backCrawlSwimmers.size() <= 5) {
       for (int i = 0; i < backCrawlSwimmers.size(); i++) {
-
         ui.printFormatLines();
         ui.display("NR: " + (i + 1) + backCrawlSwimmers.get(i).toString());
         ui.printFormatLines();
       }
-
     } else if (backCrawlSwimmers.size() > 5) {
-      {
-        for (int i = 0; i < 5; i++) {
-          ui.printFormatLines();
-          ui.display("NR: " + (i + 1) + backCrawlSwimmers.get(i).toString());
-          ui.printFormatLines();
-        }
-
+      for (int i = 0; i < 5; i++) {
+        ui.printFormatLines();
+        ui.display("NR: " + (i + 1) + backCrawlSwimmers.get(i).toString());
+        ui.printFormatLines();
       }
     }
-
-
   }
 
   public void printBreastTop5(Ui ui, ArrayList<Competitor> breastSwimmers) {
     if (breastSwimmers.size() <= 5) {
       for (int i = 0; i < breastSwimmers.size(); i++) {
-
         ui.printFormatLines();
         ui.display("NR: " + (i + 1) + breastSwimmers.get(i).toString());
         ui.printFormatLines();
       }
-
     } else if (breastSwimmers.size() > 5) {
-      {
-        for (int i = 0; i < 5; i++) {
-          ui.printFormatLines();
-          ui.display("NR: " + (i + 1) + breastSwimmers.get(i).toString());
-          ui.printFormatLines();
-        }
-
+      for (int i = 0; i < 5; i++) {
+        ui.printFormatLines();
+        ui.display("NR: " + (i + 1) + breastSwimmers.get(i).toString());
+        ui.printFormatLines();
       }
-
     }
   }
 
@@ -118,20 +95,15 @@ public class Competition {
   public void printButterflyTop5(Ui ui, ArrayList<Competitor> butterflySwimmers) {
     if (butterflySwimmers.size() <= 5) {
       for (int i = 0; i < butterflySwimmers.size(); i++) {
-
         ui.printFormatLines();
         ui.display("NR: " + (i + 1) + butterflySwimmers.get(i).toString());
         ui.printFormatLines();
       }
-
     } else if (butterflySwimmers.size() > 5) {
-      {
-        for (int i = 0; i < 5; i++) {
-          ui.printFormatLines();
-          ui.display("NR: " + (i + 1) + butterflySwimmers.get(i).toString());
-          ui.printFormatLines();
-        }
-
+      for (int i = 0; i < 5; i++) {
+        ui.printFormatLines();
+        ui.display("NR: " + (i + 1) + butterflySwimmers.get(i).toString());
+        ui.printFormatLines();
       }
     }
   }

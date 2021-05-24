@@ -1,8 +1,9 @@
+//August
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Random;
-//August
-public class Competitor implements Comparable<Competitor>{
+
+public class Competitor implements Comparable<Competitor> {
   private String name;
   private int ID;
   private LocalDateTime localDateTime;
@@ -19,9 +20,8 @@ public class Competitor implements Comparable<Competitor>{
     this.timer = timer;
   }
 
-  public Competitor() {
+  public Competitor() {}
 
-  }
   public String randomizeDiscipline() {
     int surprise = rand.nextInt(4);
     return discipline = SWIM_TYPES[surprise];
@@ -42,7 +42,6 @@ public class Competitor implements Comparable<Competitor>{
   public void setID(int ID) {
     this.ID = ID;
   }
-
 
   public void setLocalDateTime() {
     this.localDateTime = LocalDateTime.now();
@@ -73,8 +72,6 @@ public class Competitor implements Comparable<Competitor>{
     return discipline;
   }
 
-
-
   @Override
   public String toString() {
     return
@@ -89,7 +86,4 @@ public class Competitor implements Comparable<Competitor>{
   public int compareTo(Competitor o) {
     return getTimer().compareTo(o.getTimer());
   }
-
-
 }
-

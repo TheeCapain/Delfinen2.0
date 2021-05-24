@@ -1,5 +1,6 @@
-import java.util.ArrayList;
 //August
+import java.util.ArrayList;
+
 public class CoachController {
   Ui ui = new Ui();
   ArrayList<Member> juniorCompetitors = new ArrayList<>();
@@ -23,7 +24,6 @@ public class CoachController {
   }
 
   public void coachController(Menu menu) {
-
     String choice;
     boolean isRunning = true;
     do {
@@ -35,7 +35,6 @@ public class CoachController {
         case "9" -> isRunning = false;
       }
     } while (isRunning);
-
   }
 
   public void top5Controller(Ui ui, Menu menu) {
@@ -67,4 +66,3 @@ public class CoachController {
     } while (isRunning);
   }
 }
-

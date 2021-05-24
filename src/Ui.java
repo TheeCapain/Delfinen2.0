@@ -1,6 +1,7 @@
+//Jens & August
+
 import java.util.Scanner;
 
-//August
 public class Ui {
   Scanner scan = new Scanner(System.in);
 

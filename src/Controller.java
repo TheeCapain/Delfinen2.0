@@ -1,3 +1,4 @@
+//Jens & August
 import java.util.ArrayList;
 
 public class Controller {
@@ -13,16 +14,13 @@ public class Controller {
   CashHandler cashHandler = new CashHandler();
   Menu menu = new Menu();
 
+  public void runController() {
+    fileHandler.createFile(ui);
+    fileHandler.readFile(ui, members, member);
+    cashHandler.sortActiveMember(ui, members, activeMembers, fileHandler);
+    menuController();
+  }
 
-public void runController(){
-  fileHandler.createFile(ui);
-  fileHandler.readFile(ui, members, member);
-
-  cashHandler.sortActiveMember(ui,members,activeMembers,fileHandler);
-  menuController();
-}
-  //August & Je
-  // ns Controller and menu
   public void menuController() {
     String choice;
     boolean keepRunning;
@@ -35,8 +33,8 @@ public void runController(){
 
       switch (choice) {
         case "1" -> foreman.initializeForeman(ui, members, menu, fileHandler);
-        case "2" -> cashier.cashierController(ui,menu,members);
-        case "3" -> coach.coachInitializer(activeMembers,menu);
+        case "2" -> cashier.cashierController(ui, menu, members);
+        case "3" -> coach.coachInitializer(activeMembers, menu);
         case "9" -> {
           bye.bye(ui);
           keepRunning = false;
@@ -46,5 +44,3 @@ public void runController(){
     } while (keepRunning);
   }
 }
-
-
