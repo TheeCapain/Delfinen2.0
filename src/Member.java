@@ -55,7 +55,7 @@ public class Member  {
     }
     return memberStatus;
   }
-
+//August
   public int generateRandomId() {
     return rand.nextInt(9999 - 1000) + 1000;
   }

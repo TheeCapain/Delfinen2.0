@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-
+//August
 public class Competition {
   //Compares and finds top 5
   public void compareTimes(ArrayList<Competitor> competitors) {

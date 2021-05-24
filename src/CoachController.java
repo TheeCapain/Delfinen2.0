@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+//August
 public class CoachController {
   Ui ui = new Ui();
   ArrayList<Member> juniorCompetitors = new ArrayList<>();

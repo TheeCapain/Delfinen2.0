@@ -1,7 +1,7 @@
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Random;
-
+//August
 public class Competitor implements Comparable<Competitor>{
   private String name;
   private int ID;
