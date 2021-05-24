@@ -54,25 +54,14 @@ public class CoachController {
       ui.display("Enter number:");
       choice = ui.scanString();
       switch (choice) {
-<<<<<<< HEAD
         case "1" -> competition.printBreast(ui, breastSwimmerJuniors);
         case "2" -> competition.printCrawl(ui, crawlSwimmerJuniors);
-        case "3" -> competition.printBackCrawl(ui, backCrawlSwimmerJuniors);
+        case "3" -> competition.printBackCrawlTop5(ui, backCrawlSwimmerJuniors);
         case "4" -> competition.printButterfly(ui, butterflySwimmerJuniors);
         case "5" -> competition.printBreast(ui, breastSwimmerSeniors);
         case "6" -> competition.printCrawl(ui, crawlSwimmerSeniors);
-        case "7" -> competition.printBackCrawl(ui, backCrawlSwimmerSeniors);
+        case "7" -> competition.printBackCrawlTop5(ui, backCrawlSwimmerSeniors);
         case "8" -> competition.printButterfly(ui, butterflySwimmerSeniors);
-=======
-        case "1" -> competition.printBreast(ui, breastSwimmersJunior);
-        case "2" -> competition.printCrawl(ui, crawlSwimmersJunior);
-        case "3" -> competition.printBackCrawlTop5(ui, backCrawlSwimmersJunior);
-        case "4" -> competition.printButterfly(ui, butterflySwimmersJunior);
-        case "5" -> competition.printBreast(ui, breastSwimmersSenior);
-        case "6" -> competition.printCrawl(ui, crawlSwimmersSenior);
-        case "7" -> competition.printBackCrawlTop5(ui, backCrawlSwimmersSenior);
-        case "8" -> competition.printButterfly(ui, butterflySwimmersSenior);
->>>>>>> decaa7feed053ed0669aec1baf6c69010ceaedd2
         case "9" -> isRunning = false;
       }
     } while (isRunning);

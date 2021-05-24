@@ -33,13 +33,9 @@ public class Competition {
 
     }
   }
-<<<<<<< HEAD
+
 //Parsing senior and junior arrays through same method
   public void addToDiscipline(Competitor competitor,ArrayList<Competitor> crawlSwimmers, ArrayList<Competitor> backCrawlSwimmers, ArrayList<Competitor> breastSwimmers, ArrayList<Competitor> butterflySwimmers) {
-=======
-
-  public void addToDiscipline(Competitor competitor, ArrayList<Competitor> crawl, ArrayList<Competitor> backCrawl, ArrayList<Competitor> breast, ArrayList<Competitor> butterfly) {
->>>>>>> decaa7feed053ed0669aec1baf6c69010ceaedd2
     switch (competitor.getDiscipline()) {
       case "Crawl" -> crawlSwimmers.add(new Competitor(competitor.getName(), competitor.getID(), competitor.getDiscipline(), competitor.getLocalDateTime(), competitor.getTimer()));
 
